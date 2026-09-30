@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oleksandr Basenko | Developer Hub</title>
+    <title>Oleksandr Basenko | Projects Hub</title>
+    <!-- Підтягуємо іконку з іншого репозиторію -->
+    <link rel="icon" type="image/png" href="/content-publisher/favicon.png">
+    
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
@@ -17,46 +20,88 @@
         }
         .container { 
             text-align: center; 
-            background: white; 
-            padding: 50px 40px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
             max-width: 450px; 
             width: 100%; 
+            padding: 20px;
         }
-        h1 { 
-            margin: 0 0 10px 0; 
+        .header-title { 
+            margin: 0 0 5px 0; 
             font-size: 26px; 
             color: #111;
         }
-        p { 
+        .header-subtitle { 
             color: #666; 
             margin-bottom: 35px; 
             font-size: 15px;
         }
-        a.button { 
+        
+        /* Стилі для картки проєкту */
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #eaeaea;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .project-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        .project-title {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color: #111;
+        }
+        .project-desc {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0 0 25px 0;
+        }
+        .button { 
             display: inline-block; 
-            padding: 14px 28px; 
+            padding: 12px 24px; 
             background-color: #111; 
             color: white; 
             text-decoration: none; 
             border-radius: 8px; 
             font-weight: 600; 
-            transition: all 0.3s ease; 
+            font-size: 15px;
+            transition: background-color 0.3s ease; 
+            width: 100%;
+            box-sizing: border-box;
         }
-        a.button:hover { 
+        .button:hover { 
             background-color: #333; 
-            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Oleksandr Basenko</h1>
-        <p>Automation Systems & Personal Projects Hub</p>
+        <h1 class="header-title">Oleksandr Basenko</h1>
+        <p class="header-subtitle">Developer & Automation Systems Hub</p>
         
-        <!-- Ця кнопка перенаправлятиме модераторів на твій додаток -->
-        <a href="/content-publisher/" class="button">Go to ContentPoster System</a>
+        <!-- Картка проєкту -->
+        <div class="project-card">
+            <!-- Логотип підтягується автоматично -->
+            <img src="/content-publisher/logo.png" alt="ContentPoster Logo" class="project-logo">
+            
+            <h2 class="project-title">ContentPoster</h2>
+            <p class="project-desc">Private server-to-server automation system designed for corporate media publishing via Telegram.</p>
+            
+            <a href="/content-publisher/" class="button">Open Project System</a>
+        </div>
     </div>
 </body>
 </html>
